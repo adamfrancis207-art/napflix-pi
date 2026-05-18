@@ -1,0 +1,7 @@
+services:
+  napflix:
+    build: .
+    container_name: napflix
+    restart: unless-stopped
+    ports:
+      - "3000:3000"

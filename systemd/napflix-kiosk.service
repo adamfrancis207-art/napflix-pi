@@ -1,0 +1,15 @@
+[Unit]
+Description=Napflix Kiosk
+After=graphical.target network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=pi
+Environment=DISPLAY=:0
+ExecStart=/home/pi/napflix/configs/kiosk/napflix-kiosk.sh
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=graphical.target
